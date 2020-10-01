@@ -5,7 +5,7 @@ if(isset($_SESSION['user'])){
   header("Location: index.php");
 }
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $email = mysqli_real_escape_string($conn, trim($_POST['email']));
   $password = md5($_POST['password']);
   $resLogin = mysqli_query($conn, "SELECT * FROM user WHERE email='$email' AND password='$password'");
   if(mysqli_num_rows($resLogin) == 1){
