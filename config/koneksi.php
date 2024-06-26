@@ -1,7 +1,7 @@
 <?php  
-$host = "localhost";
-$user = "root";
-$pass = "";
+$host = "mysql-24006d02-dave-ipl-poc.g.aivencloud.com";
+$user = "avnadmin";
+$pass = "AVNS_6kJPT8lLc3mSeqB61D5";
 $db = "ipl_payment";
 $conn = mysqli_connect($host, $user, $pass, $db);
 function DateToIndo($date) {
